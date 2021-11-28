@@ -47,6 +47,10 @@ ul {
   text-decoration: none;
 }
 
+.nav-a :hover{
+  border-bottom: 3px solid white;
+}
+
 .nav-img {
   border-radius: 25px;
   height: 85.3px;
