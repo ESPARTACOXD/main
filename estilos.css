@@ -47,7 +47,7 @@ ul {
   text-decoration: none;
 }
 
-.nav-a :hover{
+.nav-a:hover{
   border-bottom: 3px solid white;
 }
 
