@@ -11,6 +11,8 @@ document.getElementById("button").addEventListener("click", function() {
 
   bttntimeout = setTimeout(function () {
     document.querySelector(".real").style.backgroundColor = "rgb(0,0,0)"
-    document.querySelector(".real").style.display = "flex"
+    document.querySelector(".everything").style.display = "flex"
+    document.getElementById("title").style.display = "none"
+    document.getElementById("button").style.display = "none"
   }, 2000);
 })
