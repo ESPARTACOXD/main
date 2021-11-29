@@ -8,4 +8,9 @@ document.getElementById("button").addEventListener("click", function() {
   // Play song
   var song = document.getElementById("song")
   song.play()
+
+  bttntimeout = setTimeout(function () {
+    document.querySelector(".real").style.backgroundColor = "rgb(0,0,0)"
+    document.querySelector(".real").style.display = "flex"
+  }, 2000);
 })
