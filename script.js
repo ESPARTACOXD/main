@@ -9,7 +9,6 @@ document.getElementById("button").addEventListener("click", function() {
   var song = document.getElementById("song")
   song.play()
 
-  /*
   bttntimeout = setTimeout(function () {
     document.querySelector(".real").style.display = "flex"
     document.querySelector(".real").style.backgroundColor = "rgb(0,0,0)"
@@ -17,5 +16,4 @@ document.getElementById("button").addEventListener("click", function() {
     document.getElementById("title").style.display = "none"
     document.getElementById("button").style.display = "none"
   }, 2000);
-  */
 })
