@@ -6,8 +6,8 @@ document.getElementById("button").addEventListener("click", function() {
   document.querySelector(".everything").style.display = "none"
 
   // Play song
-  /*var song = document.getElementById("song")
-  song.play()*/
+  var song = document.getElementById("song")
+  song.play()
 
   bttntimeout = setTimeout(function () {
     document.querySelector(".real").style.display = "flex"
