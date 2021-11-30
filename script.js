@@ -9,10 +9,12 @@ document.getElementById("button").addEventListener("click", function() {
   var song = document.getElementById("song")
   song.play()
 
-  /*bttntimeout = setTimeout(function () {
+  /*
+  bttntimeout = setTimeout(function () {
     document.querySelector(".real").style.backgroundColor = "rgb(0,0,0)"
     document.querySelector(".everything").style.display = "flex"
     document.getElementById("title").style.display = "none"
     document.getElementById("button").style.display = "none"
-  }, 2000);*/
+  }, 2000);
+  */
 })
