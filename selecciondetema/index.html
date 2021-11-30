@@ -7,7 +7,7 @@
     <title>Selecciona</title>
     <style>
         ul{
-            display: flex;
+            display: none;
             flex-flow: column;
         }
         li{
@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-    <h3 id="h3">IMPORTANTE: ¿Eres Lucía?  <button class="sino" id="si">Sí</button>  <button class="sino" id="no">No</button></h3>
+    <h3 id="h3">IMPORTANTE: ¿Me has pagado?  <button class="sino" id="si">Sí</button>  <button class="sino" id="no">No</button></h3>
     <ul id="algo">
         <li><a href="https://espartacoxd.me/selecciondetema/Tema1">Tema 1</a></li>
         <li><a href="https://espartacoxd.me/selecciondetema/Tema2">Tema 2</a></li>
@@ -32,16 +32,17 @@
         document.getElementById("no").addEventListener("click", function() {
             document.getElementById("algo").style.display = "none"
             document.getElementById("h3").style.display = "none"
-            document.getElementById("h1").innerHTML = "Entonces a ti no te hace falta esto"
+            document.getElementById("h1").innerHTML = "Entonces no tienes acceso a esto"
             bttntimeout = setTimeout(function () {
                 document.getElementById("h1").style.display = "none"
                 document.body.style.backgroundImage = "url('../rick.gif')"
                 var song = document.getElementById("song")
                 song.play()
-            }, 3000);
+            }, 1500);
         })
         document.getElementById("si").addEventListener("click", function() {
-            document.getElementById("h3").innerHTML = "Okay, puedes seguir, Lucía"
+            document.getElementById("h3").innerHTML = "Okay, puedes seguir"
+            document.getElementById("algo").style.display = "flex"
         })
     </script>
 </body>
