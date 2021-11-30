@@ -13,13 +13,36 @@
         li{
             margin: .5em;
         }
+        .sino{
+            text-decoration: underline;
+            color: blue;
+        }
     </style>
 </head>
 <body>
-    <ul>
+    <h3 id="h3">IMPORTANTE: ¿Eres Lucía?  <button class="sino" id="si">Sí</button>  <button class="sino" id="no">No</button></h3>
+    <ul id="algo">
         <li><a href="https://espartacoxd.me/selecciondetema/Tema1">Tema 1</a></li>
         <li><a href="https://espartacoxd.me/selecciondetema/Tema2">Tema 2</a></li>
         <li><a href="https://espartacoxd.me/selecciondetema/Tema3">Tema 3</a></li>
     </ul>
+    <h1 id="h1"></h1>
+    <audio controls hidden id="song"><source src="../roll.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+    <script type="text/javascript">
+        document.getElementById("no").addEventListener("click", function() {
+            document.getElementById("algo").style.display = "none"
+            document.getElementById("h3").style.display = "none"
+            document.getElementById("h1").innerHTML = "Entonces a ti no te hace falta esto"
+            bttntimeout = setTimeout(function () {
+                document.getElementById("h1").style.display = "none"
+                document.body.style.backgroundImage = "url('../rick.gif')"
+                var song = document.getElementById("song")
+                song.play()
+            }, 3000);
+        })
+        document.getElementById("si").addEventListener("click", function() {
+            document.getElementById("h3").innerHTML = "Okay, puedes seguir, Lucía"
+        })
+    </script>
 </body>
 </html>
