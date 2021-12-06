@@ -40,8 +40,10 @@ function game(diff) {
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
-      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
+    })
+    document.getElementById("title").addEventListener("click", function () {
+      location.reload()
     })
     ///////////////////////
   }else if (diff == "md") {
@@ -52,15 +54,17 @@ function game(diff) {
     loop = setInterval(function() {
       fab.top = "{}%".replace("{}", rand(0,73))
       fab.left = "{}%".replace("{}", rand(0,92))
-    }, 500)
+    }, 450)
 
     document.getElementById("img").addEventListener("mousedown", function() {
       fab.display = "none"
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
-      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
+    })
+    document.getElementById("title").addEventListener("click", function () {
+      location.reload()
     })
     ///////////////////////
   }else if (diff == "hr") {
@@ -78,13 +82,11 @@ function game(diff) {
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
-      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
     })
+    document.getElementById("title").addEventListener("click", function () {
+      location.reload()
+    })
     ///////////////////////
-  }else {}
-  
-  document.getElementById("h1").addEventListener("click", function() {
-    location.reload()
-  })
+  }
 }
