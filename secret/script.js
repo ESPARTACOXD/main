@@ -28,12 +28,11 @@ function game(diff) {
   if (diff == "ez") {
     document.getElementById("h1").innerHTML = "EZ"
     ///////////////////////
-    fab.width = "8%"
-    fab.top = "{}%".replace("{}", rand(0,85))
-    fab.left = "{}%".replace("{}", rand(0,95))
+    fab.top = "{}%".replace("{}", rand(0,73))
+    fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
-      fab.top = "{}%".replace("{}", rand(0,85))
-      fab.left = "{}%".replace("{}", rand(0,95))
+      fab.top = "{}%".replace("{}", rand(0,73))
+      fab.left = "{}%".replace("{}", rand(0,92))
     }, 600)
 
     document.getElementById("img").addEventListener("mousedown", function() {
@@ -41,18 +40,18 @@ function game(diff) {
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
+      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
     })
     ///////////////////////
   }else if (diff == "md") {
     document.getElementById("h1").innerHTML = "MD"
     ///////////////////////
-    fab.width = "8%"
-    fab.top = "{}%".replace("{}", rand(0,85))
-    fab.left = "{}%".replace("{}", rand(0,95))
+    fab.top = "{}%".replace("{}", rand(0,73))
+    fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
-      fab.top = "{}%".replace("{}", rand(0,85))
-      fab.left = "{}%".replace("{}", rand(0,95))
+      fab.top = "{}%".replace("{}", rand(0,73))
+      fab.left = "{}%".replace("{}", rand(0,92))
     }, 500)
 
     document.getElementById("img").addEventListener("mousedown", function() {
@@ -60,17 +59,18 @@ function game(diff) {
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
+      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
     })
     ///////////////////////
   }else if (diff == "hr") {
     document.getElementById("h1").innerHTML = "HR"
     ///////////////////////
-    fab.top = "{}%".replace("{}", rand(0,85))
-    fab.left = "{}%".replace("{}", rand(0,95))
+    fab.top = "{}%".replace("{}", rand(0,73))
+    fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
-      fab.top = "{}%".replace("{}", rand(0,85))
-      fab.left = "{}%".replace("{}", rand(0,95))
+      fab.top = "{}%".replace("{}", rand(0,73))
+      fab.left = "{}%".replace("{}", rand(0,92))
     }, 400)
 
     document.getElementById("img").addEventListener("mousedown", function() {
@@ -78,8 +78,13 @@ function game(diff) {
       clearInterval(loop)
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
+      document.getElementById("h1").onmousehover = "pointer"
       bttns.display = "none"
     })
     ///////////////////////
   }else {}
+  
+  document.getElementById("h1").addEventListener("click", function() {
+    location.reload()
+  })
 }
