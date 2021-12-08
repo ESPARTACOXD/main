@@ -19,6 +19,8 @@ function game(diff) {
   var fab = document.getElementById("img").style
   var base = document.getElementById("base")
   var bttns = document.getElementById("diffs").style
+  var rl = document.getElementById("rl").style
+  var mp = document.getElementById("mp").style
   padre.display = "block"
   base.style.display = "none"
   if (diff == "ez") {
@@ -36,9 +38,6 @@ function game(diff) {
       base.style.display = "block"
       document.getElementById("h1").innerHTML = "YOU WON!!!"
       bttns.display = "none"
-    })
-    document.getElementById("title").addEventListener("click", function () {
-      location.reload()
     })
   }else if (diff == "md") {
     document.getElementById("h1").innerHTML = "MD"
@@ -67,16 +66,24 @@ function game(diff) {
       fab.top = "{}%".replace("{}", rand(0,73))
       fab.left = "{}%".replace("{}", rand(0,92))
     }, 400)
-
-    document.getElementById("img").addEventListener("mousedown", function() {
-      fab.display = "none"
-      clearInterval(loop)
-      base.style.display = "block"
-      document.getElementById("h1").innerHTML = "YOU WON!!!"
-      bttns.display = "none"
-    })
-    document.getElementById("title").addEventListener("click", function () {
-      location.reload()
-    })
   }
+
+  document.getElementById("img").addEventListener("mousedown", function() {
+    padre.display = "none"
+    fab.display = "none"
+    clearInterval(loop)
+    base.style.display = "block"
+    document.getElementById("h1").innerHTML = "YOU WON!!!"
+    rl.display = "inline"
+    mp.display = "inline"
+    bttns.display = "none"
+    loop = setInterval(function() {
+      document.getElementById("rl").addEventListener("click", function () {
+        location.reload()
+      })
+      document.getElementById("mp").addEventListener("click", function () {
+        console.log(location.assign("../"))
+      })
+    }, 50)
+  })
 }
