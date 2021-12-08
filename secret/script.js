@@ -1,7 +1,3 @@
-texttimeout = setTimeout(function () {}, 1)
-let win = true
-let diff = null
-
 document.getElementById("ez").addEventListener("click", function() {
   game("ez")
 })
@@ -27,7 +23,6 @@ function game(diff) {
   base.style.display = "none"
   if (diff == "ez") {
     document.getElementById("h1").innerHTML = "EZ"
-    ///////////////////////
     fab.top = "{}%".replace("{}", rand(0,73))
     fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
@@ -45,10 +40,8 @@ function game(diff) {
     document.getElementById("title").addEventListener("click", function () {
       location.reload()
     })
-    ///////////////////////
   }else if (diff == "md") {
     document.getElementById("h1").innerHTML = "MD"
-    ///////////////////////
     fab.top = "{}%".replace("{}", rand(0,73))
     fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
@@ -66,10 +59,8 @@ function game(diff) {
     document.getElementById("title").addEventListener("click", function () {
       location.reload()
     })
-    ///////////////////////
   }else if (diff == "hr") {
     document.getElementById("h1").innerHTML = "HR"
-    ///////////////////////
     fab.top = "{}%".replace("{}", rand(0,73))
     fab.left = "{}%".replace("{}", rand(0,92))
     loop = setInterval(function() {
@@ -87,6 +78,5 @@ function game(diff) {
     document.getElementById("title").addEventListener("click", function () {
       location.reload()
     })
-    ///////////////////////
   }
 }
