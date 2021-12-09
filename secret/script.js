@@ -21,8 +21,34 @@ function game(diff) {
   var bttns = document.getElementById("diffs").style
   var rl = document.getElementById("rl").style
   var mp = document.getElementById("mp").style
+  var table = document.getElementById("table")
+  var points = 5000
   padre.display = "block"
   base.style.display = "none"
+  looppoints = setInterval(function () {
+    points--
+    var temp = "Points: "
+    table.innerHTML = temp + points.toString()
+    if (points == 0) {
+      padre.display = "none"
+      fab.display = "none"
+      clearInterval(loop)
+      clearInterval(looppoints)
+      base.style.display = "block"
+      document.getElementById("h1").innerHTML = "You lost :("
+      rl.display = "inline"
+      mp.display = "inline"
+      bttns.display = "none"
+      loop = setInterval(function() {
+        document.getElementById("rl").addEventListener("click", function () {
+          location.reload()
+        })
+        document.getElementById("mp").addEventListener("click", function () {
+          console.log(location.assign("../"))
+        })
+      }, 50)
+    }
+  }, 1)
   if (diff == "ez") {
     document.getElementById("h1").innerHTML = "EZ"
     fab.top = "{}%".replace("{}", rand(0,73))
@@ -72,6 +98,7 @@ function game(diff) {
     padre.display = "none"
     fab.display = "none"
     clearInterval(loop)
+    clearInterval(looppoints)
     base.style.display = "block"
     document.getElementById("h1").innerHTML = "YOU WON!!!"
     rl.display = "inline"
