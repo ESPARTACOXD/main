@@ -22,7 +22,7 @@ function game(diff) {
   var rl = document.getElementById("rl").style
   var mp = document.getElementById("mp").style
   var table = document.getElementById("table")
-  var points = 5000
+  var points = 1000
   padre.display = "block"
   base.style.display = "none"
   looppoints = setInterval(function () {
