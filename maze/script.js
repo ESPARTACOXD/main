@@ -1,0 +1,1 @@
+document.querySelectorAll(".wall").forEach(item => item.addEventListener("mouseenter", () => {console.log("Si")}))
