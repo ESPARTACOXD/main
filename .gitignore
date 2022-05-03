@@ -3,3 +3,5 @@ package-lock.json
 /calendar
 /bootstrap/node_modules
 /bootstrap/sass
+/bootstrap/package.json
+/bootstrap/index.html
