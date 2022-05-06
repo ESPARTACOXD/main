@@ -1,4 +1,4 @@
 .pos-right {
-    position: inherit;
+    position: fixed;
     right: 0;
 }
